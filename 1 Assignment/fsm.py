@@ -23,6 +23,7 @@ class dfsm:
 
         no_of_states = int(input("Enter number of states in fsm : ")) #number of states in fsm
         transitions = {} #declaring an empty transition
+        print("Enter transitions below : (please enter -1 for trap state)")
         for i in range(0, no_of_states):
             transitions[i] = {} #declaring an empty transition for ith state
             temp = {}
@@ -36,4 +37,4 @@ class dfsm:
         state = self.initial #initiating start state
         for c in word: #iterating through word
             state = self.transitions[state][c] #state transition
-        return state in self.final #returns 1 if state is in final stat
+        return state in self.final
